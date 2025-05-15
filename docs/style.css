@@ -1,0 +1,128 @@
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo degradado para el cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #8a92b2, #3019da, #fdbb2d);
+  color: #e0e7e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  animation: gradientBG 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* Animación para el fondo degradado */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Título */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f6faf5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+/* Barra lateral */
+.sidebar {
+  background: linear-gradient(135deg, #1e5799, #207cca, #2989d8, #7db9e8);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 20px 0;
+  transition: transform 0.3s ease;
+  animation: gradientBG 15s ease infinite;
+}
+
+.sidebar:hover {
+  transform: translateY(-5px);
+}
+
+/* Lista del menú */
+#menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu .menu-item {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  margin: 8px 0;
+  width: 80%;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#menu .menu-item a {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#menu .menu-item a i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+#menu .menu-item:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#menu .menu-item:hover a {
+  color: #1a2a6c;
+}
+
+/* Efecto de pulsación */
+#menu .menu-item:active {
+  transform: scale(0.98);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 90%;
+  }
+
+  #menu .menu-item a {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
